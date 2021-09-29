@@ -1,12 +1,12 @@
 // Assignment Code
 var enter;
+var options;
 var generateBtn = document.querySelector("#generate");
+
 upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", ">", "<", "?", "/"];
-options;
-
 
 // Write password to the #password input
 function writePassword() {
@@ -29,11 +29,33 @@ function generatePassword(){
     symbols = confirm("Symbols?")
   };
 
+
   if (!upperCase && !lowerCase && !numbers && !symbols) {
     options = alert("You must choose!");
 
-  } else if (upperCase && lowerCase && numbers && symbols)
+    // Selected all 4 options
+  } else if (upperCase && lowerCase && numbers && symbols) {
+    options = upperCase.concat(lowerCase, numbers, symbols);
 
+    // Selected 3 options
+  } else if (upperCase && lowerCase && numbers) {
+    options = upperCase.concat(upperCase, lowerCase, numbers);
+  
+  } else if (upperCase && lowerCase && symbols) {
+    options = upperCase.concat(upperCase, lowerCase, symbols);
+  
+  } else if (upperCase && numbers && symbols) {
+    options = upperCase.concat(upperCase, numbers, symbols);
+
+  } else if (lowerCase && numbers && symbols) {
+    options = upperCase.concat(lowerCase, numbers, symbols);
+
+    // Selected 2 options
+  } else if (upperCase && lowerCase) {
+    options = upperCase.concat(lowerCase);
+  
+  
+  
 
 
 // Add event listener to generate button
