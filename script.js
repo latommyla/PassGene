@@ -7,15 +7,14 @@ lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", ">", "<", "?", "/"];
 
-/*
+
 // Write password to the #password input
 function writePassword () {
   var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  
+  var passwordText = document.querySelector("#password")
   passwordText.value = password;
 }
-*/
+
 
 var generateBtn = document.querySelector("#generate");
 
@@ -100,11 +99,11 @@ function generatePassword(){
     password.push(chooseOptions);
   }
 
-    var password = password.join("");
-    UserInput(ps);
-    return password;
+    var test = password.join("");
+    UserInput(test);
+    return test;
   }
 
-  function UserInput(ps) {
-    document.getElementById("password").textContent = ps;
+  function UserInput(test) {
+    document.getElementById("password").passwordText = test;
   }
