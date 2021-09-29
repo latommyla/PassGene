@@ -1,6 +1,7 @@
 // Assignment Code
 var enter;
 var options;
+var password = [];
 var generateBtn = document.querySelector("#generate");
 
 upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -14,6 +15,13 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
+
+
+generateBtn.addEventListener("click", function () {
+  ps = generatePassword();
+  document.getElementById("generate").placeholder = ps;
+});
+
 
 function generatePassword(){
   enter = parseInt(prompt("How many characters? Choose between 8 and 128"));
@@ -80,10 +88,20 @@ function generatePassword(){
 
   } else if (symbols) {
     options = symbols;
-  
   };
 
+  var password = [];
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+  for (var i = 0; i < enter; i++) {
+    var chooseOptions = options[Math.floor(Math.random() * options.length)];
+    passwordText.push(chooseOptions);
+  }
 
+  var ps = password.join("");
+  UserInput(ps);
+  return ps;
+  }
+
+  function UserInput(ps) {
+    document.getElementById("password").textContent = ps;
+  }
