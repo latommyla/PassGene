@@ -54,8 +54,23 @@ function generatePassword(){
   } else if (upperCase && lowerCase) {
     options = upperCase.concat(lowerCase);
   
+  } else if (upperCase && numbers) {
+    options = upperCase.concat(numbers);
   
-  
+  } else if (upperCase && symbols) {
+    options = upperCase.concat(symbols);
+
+  } else if (lowerCase && numbers) {
+    options = lowerCase.concat(numbers);
+
+  } else if (lowerCase && symbols) {
+    options = lowerCase.concat(symbols);
+
+  } else if (numbers && symbols) {
+    options = numbers.concat(symbols);
+
+
+
 
 
 // Add event listener to generate button
