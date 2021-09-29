@@ -29,15 +29,14 @@ function generatePassword(){
     symbols = confirm("Symbols?")
   };
 
-
   if (!upperCase && !lowerCase && !numbers && !symbols) {
     options = alert("You must choose!");
 
-    // Selected all 4 options
+    // Selected all 4 options for password
   } else if (upperCase && lowerCase && numbers && symbols) {
     options = upperCase.concat(lowerCase, numbers, symbols);
 
-    // Selected 3 options
+    // Selected 3 options for password
   } else if (upperCase && lowerCase && numbers) {
     options = upperCase.concat(upperCase, lowerCase, numbers);
   
@@ -50,7 +49,7 @@ function generatePassword(){
   } else if (lowerCase && numbers && symbols) {
     options = upperCase.concat(lowerCase, numbers, symbols);
 
-    // Selected 2 options
+    // Selected 2 options for password
   } else if (upperCase && lowerCase) {
     options = upperCase.concat(lowerCase);
   
@@ -69,8 +68,20 @@ function generatePassword(){
   } else if (numbers && symbols) {
     options = numbers.concat(symbols);
 
+    // Selected only 1 option for password
+  } else if (upperCase) {
+    options = upperCase;
 
+  } else if (lowerCase) {
+    options = lowerCase;
+  
+  } else if (numbers) {
+    options = numbers;
 
+  } else if (symbols) {
+    options = symbols;
+  
+  };
 
 
 // Add event listener to generate button
