@@ -2,6 +2,7 @@
 var enter;
 var options;
 
+
 upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
@@ -32,10 +33,10 @@ function generatePassword(){
     enter = parseInt(prompt("Please choose between 8 and 128"));
 
   } else {
-    upperCase = confirm("Uppcase letters?")
-    lowerCase = confirm("Lowercase letters?")
-    numbers = confirm("Numbers?")
-    symbols = confirm("Symbols?")
+    confirmUpperCase = confirm("Uppcase letters?")
+    confirmLowerCase = confirm("Lowercase letters?")
+    confirmNumbers = confirm("Numbers?")
+    confirmSymbols = confirm("Symbols?")
   };
 
   if (!upperCase && !lowerCase && !numbers && !symbols) {
