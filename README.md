@@ -9,13 +9,21 @@ This project was a huge learning experience and definitely very new to me. Javas
 
 <img src="./images/demoscreenshot.png" alt="websitescreenshot">
 
+## Installation
+- To install this code, make sure you download the zip file, or clone the GitHub repository.
+
+## Features 
+- HTML, with basic inputs with buttons, all with divs and ids.
+- CSS, very simple layout with media queries.
+- JS, varibles with functions and else if statements.
+
 ## How does this work?
 - Simply clicking on the Generate Password button and prompts will appear.
 - Prompts will appear if you want upper or lower case letters first.
 - Then you'll be asked if you want numbers or symbols in the generated password.
 - Or simply choose all of them for a more secure password.
 
-## Installation
-- Download the zip file or clone the GitHub repo.
-
-## 
+## What did I learn from all of this?
+- How to properly use functions and variables.
+- Using Click functions.
+- Correct sequence for script.js
