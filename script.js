@@ -1,13 +1,17 @@
 // Assignment Code
 var enter;
-var options;
-
+var confirmUpperCase;
+var confirmLowerCase;
+var confirmNumbers;
+var confirmSymbols;
 
 upperCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 symbols = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "_", "-", "+", "=", ">", "<", "?", "/"];
 
+var options;
+var enter;
 
 // Write password to the #password input
 function writePassword () {
@@ -15,7 +19,6 @@ function writePassword () {
   var passwordText = document.querySelector("#password")
   passwordText.value = password;
 }
-
 
 var generateBtn = document.querySelector("#generate");
 
@@ -43,52 +46,52 @@ function generatePassword(){
     options = alert("You must choose!");
 
     // Selected all 4 options for password
-  } else if (upperCase && lowerCase && numbers && symbols) {
+  } else if (confirmUpperCase && confirmLowerCase && confirmNumbers && confirmSymbols) {
     options = upperCase.concat(lowerCase, numbers, symbols);
 
     // Selected 3 options for password
-  } else if (upperCase && lowerCase && numbers) {
+  } else if (confirmUpperCase && confirmLowerCase && confirmNumbers) {
     options = upperCase.concat(upperCase, lowerCase, numbers);
   
-  } else if (upperCase && lowerCase && symbols) {
+  } else if (confirmUpperCase && confirmLowerCase && confirmSymbols) {
     options = upperCase.concat(upperCase, lowerCase, symbols);
   
-  } else if (upperCase && numbers && symbols) {
+  } else if (confirmUpperCase && confirmLowerCase && confirmSymbols) {
     options = upperCase.concat(upperCase, numbers, symbols);
 
-  } else if (lowerCase && numbers && symbols) {
+  } else if (confirmLowerCase && confirmNumbers && confirmSymbols) {
     options = upperCase.concat(lowerCase, numbers, symbols);
 
     // Selected 2 options for password
-  } else if (upperCase && lowerCase) {
+  } else if (confirmUpperCase && confirmLowerCase) {
     options = upperCase.concat(lowerCase);
   
-  } else if (upperCase && numbers) {
+  } else if (confirmUpperCase && confirmNumbers) {
     options = upperCase.concat(numbers);
   
-  } else if (upperCase && symbols) {
+  } else if (confirmUpperCase && confirmSymbols) {
     options = upperCase.concat(symbols);
 
-  } else if (lowerCase && numbers) {
+  } else if (confirmLowerCase && confirmNumbers) {
     options = lowerCase.concat(numbers);
 
-  } else if (lowerCase && symbols) {
+  } else if (confirmLowerCase && confirmSymbols) {
     options = lowerCase.concat(symbols);
 
-  } else if (numbers && symbols) {
+  } else if (confirmNumbers && confirmSymbols) {
     options = numbers.concat(symbols);
 
     // Selected only 1 option for password
-  } else if (upperCase) {
+  } else if (confirmUpperCase) {
     options = upperCase;
 
-  } else if (lowerCase) {
+  } else if (confirmLowerCase) {
     options = lowerCase;
   
-  } else if (numbers) {
+  } else if (confirmNumbers) {
     options = numbers;
 
-  } else if (symbols) {
+  } else if (confirmSymbols) {
     options = symbols;
   };
 
@@ -103,8 +106,8 @@ function generatePassword(){
     var test = password.join("");
     UserInput(test);
     return test;
-  }
+}
 
-  function UserInput(test) {
-    document.getElementById("password").passwordText = test;
-  }
+function UserInput(test) {
+  document.getElementById("password").passwordText = test;
+}
