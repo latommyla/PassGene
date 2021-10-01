@@ -23,9 +23,11 @@ function writePassword () {
   passwordText.value = password;
 }
 
+// generateBtn variable from generate ID
 var generateBtn = document.querySelector("#generate");
 
-// Generate button with click function to grab the password
+
+// Generate button with click function to grab from password ID
 generateBtn.addEventListener("click", function () {
   ps = generatePassword();
   document.getElementById("password").placeholder = ps;
@@ -112,6 +114,7 @@ function generatePassword(){
     return output;
 }
 
+// Outputs to the password textbox
 function UserInput(output) {
   document.getElementById("password").passwordText = output;
 }
