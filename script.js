@@ -103,11 +103,11 @@ function generatePassword(){
     password.push(chooseOptions);
   }
 
-    var test = password.join("");
-    UserInput(test);
-    return test;
+    var output = password.join("");
+    UserInput(output);
+    return output;
 }
 
-function UserInput(test) {
-  document.getElementById("password").passwordText = test;
+function UserInput(output) {
+  document.getElementById("password").passwordText = output;
 }
